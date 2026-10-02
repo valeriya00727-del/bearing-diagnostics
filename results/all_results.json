@@ -1,0 +1,60 @@
+{
+    "CNN": {
+        "accuracy": 0.9706521739130435,
+        "precision": 0.976890832877711,
+        "recall": 0.9706521739130435,
+        "f1": 0.9700763627885438,
+        "loss": 0.1347043216228485,
+        "history": null,
+        "hyperparameters": {
+            "framework": "keras",
+            "input_shape": "(920, 32, 32)",
+            "loss_type": "categorical_crossentropy",
+            "layers": "3_conv_blocks"
+        }
+    },
+    "CNN_LSTM": {
+        "accuracy": 0.9891304347826086,
+        "precision": 0.9900138400936868,
+        "recall": 0.9891304347826086,
+        "f1": 0.9891069417939374,
+        "loss": 0.04218427091836929,
+        "history": null,
+        "hyperparameters": {
+            "framework": "keras",
+            "input_shape": "(920, 32, 32)",
+            "loss_type": "sparse_categorical_crossentropy",
+            "layers": "Conv1D_64_128 + LSTM_64"
+        }
+    },
+    "CNN_BiGRU": {
+        "accuracy": 0.9956521739130435,
+        "precision": 0.9956752924494859,
+        "recall": 0.9956521739130435,
+        "f1": 0.9956520454881111,
+        "loss": 0.015064598992466927,
+        "history": null,
+        "hyperparameters": {
+            "framework": "keras",
+            "input_shape": "(920, 32, 32)",
+            "loss_type": "categorical_crossentropy",
+            "layers": "Conv1D_64_128_256 + Bidirectional_GRU_128",
+            "bidirectional": true
+        }
+    },
+    "CNN_StackedLSTM": {
+        "accuracy": 0.9956521739130435,
+        "precision": 0.9956636047449512,
+        "recall": 0.9956521739130435,
+        "f1": 0.9956461700474529,
+        "loss": 0.018155939877033234,
+        "history": null,
+        "hyperparameters": {
+            "framework": "keras",
+            "input_shape": "(920, 32, 32)",
+            "loss_type": "categorical_crossentropy",
+            "layers": "Conv1D_64_128_256 + LSTM_128(return_seq) + LSTM_64",
+            "stacked_lstm_layers": 2
+        }
+    }
+}

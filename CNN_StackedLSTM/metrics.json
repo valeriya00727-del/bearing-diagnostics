@@ -1,0 +1,6 @@
+{
+    "model": "CNN_StackedLSTM",
+    "accuracy": 0.9956521987915039,
+    "loss": 0.025999652221798897,
+    "parameters": 395018
+}
